@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Maria's Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Dulce Maria's Photography</h1>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#game">Guessing Game</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Dark Mode Toggle -->
+         <div class="theme-toggle">
+            <label for="theme-switch">Dark Mode:</label>
+            <input type="checkbox" id="theme-switch">
+         </div>
+    </header>
+
+    <!--Product Display: Photo Gallery-->
+    <section id="photo-section">    
+    <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <span class="next" id="prev">NEXT</span>
+                <!--My Artwork-->
+            <img id="gallery-image" src="images/nature.JPG" alt="Nature Photo">
+            <p id="photo-description">A beautiful nature shot.  01/26/2023</p>
+        </div>
+    </section>
+
+    <!--Gameplay-->
+    <section id="game">
+        <h2>Guessing Game</h2>
+        <p>Guess a number between 1 and 10!</p>
+        <input type="number" id="guess-input" min="1" max="10">
+        <button onclick="playGame()">Submit Guess</button>
+        <p id="game-result"></p>
+    </section>
+
+    <!--Contact Form-->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Full Name (required):</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="123-456-7890" required>
+            <span id="phone-error" style="color: red;"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <p>Preferred Contact Method:</p>
+            <div class="radio-group">
+                <input type="radio" id="contact-phone" name="contact-method" value="phone" required>
+                <label for="contact-phone">Phone</label>
+
+                <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                <label for="contact-email">Email</label>
+            </div>
+
+            <label for="comments" >Comments:</label>
+            <textarea id="comments" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-result"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dulce M. Villagomez Perez</p>
+    </footer>
+</body>
+</html>
